@@ -1,0 +1,57 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Environment-dependent path to Maven home directory
+/mavenHomeManager.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# --- IDE: VS Code ---
+.vscode/
+*.code-workspace
+.history/
+
+# --- IDE: IntelliJ IDEA (and other JetBrains IDEs) ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# --- IDE: Eclipse ---
+.metadata
+.classpath
+.project
+.settings/
+bin/
+
+# --- IDE: Visual Studio (Windows) ---
+.vs/
+Debug/
+Release/
+*.user
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# --- IDE: NetBeans ---
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# --- Operating System Files (Mac/Windows/Linux) ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# --- General Temporary Files ---
+*.log
+*.bak
+*.tmp
+*.swp
