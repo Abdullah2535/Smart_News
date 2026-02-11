@@ -30,17 +30,15 @@ CREATE TABLE  category (
 
 CREATE TABLE  news (
                                              id INT  NOT NULL,
-                                             headline TINYTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-                                             article_url TINYTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+                                             headline VARCHAR(2048) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+                                             article_url VARCHAR(2048) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
                                              source VARCHAR(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
                                              published_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                                             thumbnail TINYTEXT NOT NULL,
-                                             category_id INT NOT NULL,
-                                             sentiment_id INT NOT NULL,
+                                             thumbnail TINYTEXT ,
+                                             category_id INT ,
+                                             sentiment_id INT ,
                                              PRIMARY KEY (`id`),
                                              UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-                                             UNIQUE INDEX `category_id_UNIQUE` (`category_id` ASC) VISIBLE,
-                                             UNIQUE INDEX `sentiment_id_UNIQUE` (`sentiment_id` ASC) VISIBLE,
                                              CONSTRAINT `fk_news_on_sentiment`
                                                  FOREIGN KEY (`sentiment_id`)
                                                      REFERENCES sentiment (`id`)

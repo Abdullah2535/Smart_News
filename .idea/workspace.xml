@@ -4,18 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="285f69a9-5d51-4c9f-94c2-a5aedfd185c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V1__initial_migration.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="285f69a9-5d51-4c9f-94c2-a5aedfd185c8" name="Changes" comment="initial_migration">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/NewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/NewsForAiDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/SaveBasicNewsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/UpdateSentimentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Preference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/PreferenceContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Sentiment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/mappers/NewsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/CustomNewsUpdateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/NewsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/NewsRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/PreferenceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/BackEndApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/BackEndApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V1__initial_migration.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V1__initial_migration.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="com.intellij.jpb.JpaRepository" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +72,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.BackEnd [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:clean].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:info].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:migrate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -53,6 +83,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BackEndApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/1- Graduation Project/Implementation/BackEnd/src/main/resources",
@@ -61,6 +92,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.repository",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -99,11 +131,41 @@
       <option name="presentableId" value="Default" />
       <updated>1770503815118</updated>
       <workItem from="1770503816522" duration="66000" />
-      <workItem from="1770503896602" duration="3668000" />
+      <workItem from="1770503896602" duration="8483000" />
+      <workItem from="1770519620094" duration="3194000" />
+      <workItem from="1770568073592" duration="4158000" />
+      <workItem from="1770577273294" duration="93000" />
+      <workItem from="1770645815858" duration="1603000" />
+      <workItem from="1770736508109" duration="8108000" />
+      <workItem from="1770769387917" duration="16217000" />
     </task>
+    <task id="LOCAL-00001" summary="initial_migration">
+      <option name="closed" value="true" />
+      <created>1770507679509</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770507679509</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial_migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial_migration" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/NewsController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

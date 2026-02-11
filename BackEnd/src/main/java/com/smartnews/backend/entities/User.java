@@ -1,0 +1,39 @@
+package com.smartnews.backend.entities;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "user")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Integer id;
+
+    @NotNull
+    @Column(name = "name")
+    private String name;
+
+    @NotNull
+    @Column(name = "user_name")
+    private String userName;
+
+    @NotNull
+    @Column(name = "password")
+    private String password;
+
+    @Size(max = 45)
+    @NotNull
+    @Column(name = "role" )
+    private String role;
+
+    @OneToOne(mappedBy = "user",orphanRemoval = true)
+    private Preference preference;
+
+}
