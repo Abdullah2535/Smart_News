@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class SaveBasicNewsDto {
-    private int id;
+    private Integer id;
     private String headline;
     private String articleUrl;
     private String source;
-    private int categoryId;
+    private Integer categoryId;
     private String thumbnail;
 }

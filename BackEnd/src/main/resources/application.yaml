@@ -7,5 +7,11 @@ spring:
     password: query
   jpa:
     show-sql: true
+  jwt:
+    secret: ${JWT_SECRET}
+    accessTokenExpiration: 900 #15mins
+    refreshTokenExpiration: 604800 #7days
+#  profiles:
+#    active: dev
 
  # websiteUrl: http://localhost:4242

@@ -5,6 +5,8 @@ import com.smartnews.backend.entities.News;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface NewsMapper {
     @Mapping(source = "categoryId", target = "category.id")

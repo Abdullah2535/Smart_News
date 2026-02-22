@@ -24,7 +24,6 @@ public class Sentiment {
     @OneToOne(mappedBy = "sentiment")
     private News news;
 
-    @OneToMany(mappedBy = "sentiment")
-    private Set<PreferenceContent> preferenceContents = new HashSet<>();
+
 
 }

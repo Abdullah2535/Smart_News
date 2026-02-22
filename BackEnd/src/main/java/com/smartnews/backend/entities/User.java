@@ -28,10 +28,10 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Size(max = 45)
     @NotNull
     @Column(name = "role" )
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @OneToOne(mappedBy = "user",orphanRemoval = true)
     private Preference preference;
