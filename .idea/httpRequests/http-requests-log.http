@@ -1,0 +1,798 @@
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Authorization: Bearer {{$auth.token("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJhYmRhbGxhMjUzNSIsIm5hbWUiOiJBYmR1bGxhaCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTcyNzMzMSwiZXhwIjoxNzcyMzMyMTMxfQ.bD2ZnbAna4AQt9GzXY3aN1R4V9ymThGtgmNQu-mea9AyY5RLusLzYmuvvtnE918LCi6sIaO9tPD_Cpg03ssaVA")}}
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Authorization: Bearer {{$auth.token("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJhYmRhbGxhMjUzNSIsIm5hbWUiOiJBYmR1bGxhaCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTcyNzMzMSwiZXhwIjoxNzcyMzMyMTMxfQ.bD2ZnbAna4AQt9GzXY3aN1R4V9ymThGtgmNQu-mea9AyY5RLusLzYmuvvtnE918LCi6sIaO9tPD_Cpg03ssaVA")}}
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Authorization: Bearer {{$auth.token("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJhYmRhbGxhMjUzNSIsIm5hbWUiOiJBYmR1bGxhaCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTcyNzMzMSwiZXhwIjoxNzcyMzMyMTMxfQ.bD2ZnbAna4AQt9GzXY3aN1R4V9ymThGtgmNQu-mea9AyY5RLusLzYmuvvtnE918LCi6sIaO9tPD_Cpg03ssaVA")}}
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Authorization: Bearer {{$auth.token("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJhYmRhbGxhMjUzNSIsIm5hbWUiOiJBYmR1bGxhaCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTcyNzMzMSwiZXhwIjoxNzcyMzMyMTMxfQ.bD2ZnbAna4AQt9GzXY3aN1R4V9ymThGtgmNQu-mea9AyY5RLusLzYmuvvtnE918LCi6sIaO9tPD_Cpg03ssaVA")}}
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Authorization: Bearer {{$auth.token("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJhYmRhbGxhMjUzNSIsIm5hbWUiOiJBYmR1bGxhaCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTcyNzMzMSwiZXhwIjoxNzcyMzMyMTMxfQ.bD2ZnbAna4AQt9GzXY3aN1R4V9ymThGtgmNQu-mea9AyY5RLusLzYmuvvtnE918LCi6sIaO9tPD_Cpg03ssaVA")}}
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-22T042851.200.json
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-22T042819.200.json
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-22T042215.200.json
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 1,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 0,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/news/userP
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userId": 0,
+  "categoryIds": [5,6],
+  "sentimentIds": [1,2]
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-22T041732.200.json
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-17T041559.200.json
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-17T032504.201.json
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-17T031028.201.json
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-16T001135.201.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "coldplay"
+}
+
+<> 2026-02-16T000539.201.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T235241.201.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T151139.201.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T150727.201.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T150353.500.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T150231.500.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 68
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T150213.400.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T150124.500.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T150111.500.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T145847.500.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+<> 2026-02-15T145812.500.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4F21C4E8489DFD55EF3964B3A21342E8
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Content-Length: 79
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Abdullah",
+  "userName": "abdalla2535",
+  "password": "ploycold"
+}
+
+###
+
