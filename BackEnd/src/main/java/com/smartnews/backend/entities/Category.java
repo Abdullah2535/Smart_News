@@ -2,15 +2,20 @@ package com.smartnews.backend.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "category")
 public class Category {
     @Id
@@ -21,9 +26,6 @@ public class Category {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(mappedBy = "category")
-    private News news;
-
-
-
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<News> newsSet = new HashSet<>();
 }

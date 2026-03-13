@@ -1,2 +1,3 @@
 # domain	path	name	value	date
 localhost	/	JSESSIONID	4F21C4E8489DFD55EF3964B3A21342E8	-1
+localhost	/auth/refresh	refresh_token	eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJhYmRhbGxhMjUzNSIsIm5hbWUiOiJBYmR1bGxhaCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzczMjQ4MzI3LCJleHAiOjE3NzM4NTMxMjd9.2F1p-9YTNQyF9HIIp14T5HkjJQbqn6j-1GVdqHfET_zg-_RdfbI_IMKy77VRwQy1VIPmFtR-ddT6uVwtiiIU3A	Wed, 11-Mar-2026 17:08:52 GMT

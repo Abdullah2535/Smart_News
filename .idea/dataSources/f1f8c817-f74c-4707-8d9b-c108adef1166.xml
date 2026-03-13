@@ -967,7 +967,7 @@
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-02-11.02:06:23</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-03-11.16:49:20</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="308" parent="1" name="hunter">
@@ -1205,6 +1205,7 @@
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
     <column id="356" parent="316" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
@@ -1218,38 +1219,40 @@
       <Position>3</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <foreign-key id="359" parent="316" name="fk_preferences_on_user_id">
+    <column id="359" parent="316" name="chosen_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <foreign-key id="360" parent="316" name="fk_preferences_on_user_id">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="360" parent="316" name="PRIMARY">
+    <index id="361" parent="316" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="361" parent="316" name="id_UNIQUE">
+    <index id="362" parent="316" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="362" parent="316" name="user_id_UNIQUE">
+    <index id="363" parent="316" name="fk_preferences_on_user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
-      <Unique>1</Unique>
     </index>
-    <key id="363" parent="316" name="PRIMARY">
+    <key id="364" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="364" parent="316" name="id_UNIQUE">
+    <key id="365" parent="316" name="id_UNIQUE">
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
-    </key>
-    <key id="365" parent="316" name="user_id_UNIQUE">
-      <UnderlyingIndexName>user_id_UNIQUE</UnderlyingIndexName>
     </key>
     <column id="366" parent="317" name="id">
       <NotNull>1</NotNull>
@@ -1299,7 +1302,7 @@
     <column id="375" parent="318" name="password">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>varchar(45)|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="376" parent="318" name="role">
       <NotNull>1</NotNull>

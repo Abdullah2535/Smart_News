@@ -20,7 +20,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-
+//@CrossOrigin(origins = "http://127.0.0.1:4200")
 @RestController
 @RequestMapping("/auth")
 @AllArgsConstructor
@@ -49,7 +49,7 @@ public class AuthController {
         cookie.setMaxAge(jwtConfig.getRefreshTokenExpiration()); // 7days
         cookie.setSecure(true);
         response.addCookie(cookie);
-        System.out.println("Setting refresh token cookie: " + refreshToken);
+        System.out.println("Setting access token cookie: " + accessToken);
         return ResponseEntity.ok(new JwtResponse(accessToken.toString()));
     }
 
@@ -58,7 +58,7 @@ public class AuthController {
     public ResponseEntity<Void>handleBadCredentialsException() {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
-//    @PostMapping("/validate")
+    //    @PostMapping("/validate")
 //    public boolean validate(@RequestHeader("Authorization") String authHeader){
 //        System.out.println("Validate called" );
 //     var token = authHeader.replace("Bearer ", "");

@@ -1,0 +1,49 @@
+<div class="login-page">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="logo" style="justify-content: center; margin-bottom: 35px">
+        <img src="ab_logo.png" alt="Logo" class="logo-img" />
+      </div>
+
+      <h2 class="headline" style="text-align: center; margin-bottom: 30px">مرحباً بك مجدداً</h2>
+
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label>اسم المستخدم</label>
+          <input
+            type="userName"
+            formControlName="userName"
+            placeholder="Enter Your UserName"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>كلمة المرور</label>
+          <input type="password" formControlName="password" placeholder="••••••••" required />
+        </div>
+
+        <div
+          *ngIf="errorMessage"
+          class="error-text"
+          style="color: #ff7675; text-align: center; font-size: 0.9rem"
+        >
+          {{ errorMessage }}
+        </div>
+
+        <button type="submit" class="login-btn" [disabled]="loginForm.invalid || isLoading">
+          {{ isLoading ? 'جاري الدخول...' : 'دخول' }}
+        </button>
+      </form>
+
+      <div class="meta-data" style="text-align: center; margin-top: 20px">
+        <span
+          >ليس لديك حساب؟
+          <a routerLink="/signup" style="color: var(--accent); text-decoration: none"
+            >سجل الآن</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

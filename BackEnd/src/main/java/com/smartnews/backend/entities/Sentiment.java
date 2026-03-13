@@ -2,7 +2,9 @@ package com.smartnews.backend.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.HashSet;
@@ -11,6 +13,8 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "sentiment")
 public class Sentiment {
     @Id
@@ -21,9 +25,7 @@ public class Sentiment {
     @Column(name = "type")
     private String type;
 
-    @OneToOne(mappedBy = "sentiment")
-    private News news;
-
-
-
+    @OneToMany(mappedBy = "sentiment",
+            cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<News> newsSet = new HashSet<>();
 }

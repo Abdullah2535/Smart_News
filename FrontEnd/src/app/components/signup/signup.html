@@ -1,0 +1,41 @@
+<div class="login-page signup-page">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="logo" style="justify-content: center; margin-bottom: 35px">
+        <img src="ab_logo.png" alt="Logo" class="logo-img" />
+      </div>
+
+      <h2 class="headline" style="text-align: center; margin-bottom: 30px">إنشاء حساب جديد</h2>
+
+      <form class="login-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label>الاسم الكامل</label>
+          <input type="text" formControlName="name" placeholder="أدخل اسمك هنا" required />
+        </div>
+
+        <div class="input-group">
+          <label>اسم المستخدم</label>
+          <input type="userName" formControlName="userName" placeholder="" required />
+        </div>
+
+        <div class="input-group">
+          <label>كلمة المرور</label>
+          <input type="password" formControlName="password" placeholder="••••••••" required />
+        </div>
+
+        <button type="submit" class="login-btn" [disabled]="signupForm.invalid">
+          إنشاء الحساب
+        </button>
+      </form>
+
+      <div class="meta-data" style="text-align: center; margin-top: 20px">
+        <span
+          >لديك حساب بالفعل؟
+          <a routerLink="/login" style="color: var(--accent); text-decoration: none"
+            >سجل دخول</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JpaBuddyIdeaProjectConfig" migrateIndexesAndConstraints="true" reUseTableSchema="true" newRepositoryParent="org.springframework.data.jpa.repository.JpaRepository">
+  <component name="JpaBuddyIdeaProjectConfig" migrateIndexesAndConstraints="true" reUseTableSchema="true" newRepositoryParent="org.springframework.data.repository.CrudRepository">
     <option name="migrateIndexesAndConstraints" value="true" />
     <option name="reLastEntityCreationPackage" value="BackEnd/src/main/java/com/smartnews/backend/entities" />
     <option name="reverseEngineeringLastDbConnectionId" value="f1f8c817-f74c-4707-8d9b-c108adef1166" />

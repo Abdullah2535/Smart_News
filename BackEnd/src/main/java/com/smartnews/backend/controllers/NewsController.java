@@ -54,14 +54,14 @@ public class NewsController {
     }
      var user = userRepository.findUserById(choices.getUserId());
      var newChoices =preferenceService.changePreferenceContent(choices);
-      Preference preference;
-      if (user.getPreference() == null){
-          preference = new Preference(newChoices, user);
-      }else{
-        preference = preferenceRepository.findById(user.getPreference().getId()).orElse(null);
-        assert preference != null;
-        preference.setPreferenceContent(newChoices);
-      }
+      Preference preference =new Preference(newChoices, user);
+//      if (user.getPreference() == null){
+//          preference = new Preference(newChoices, user);
+//      }else{
+//        preference = preferenceRepository.findById(user.getPreference().getId()).orElse(null);
+//        assert preference != null;
+//        preference.setPreferenceContent(newChoices);
+//      }
       preferenceRepository.save(preference);
       var news = newsRepository.findBySentimentAndCategory(choices.getCategoryIds(), choices.getSentimentIds());
      return ResponseEntity.ok().body(news);

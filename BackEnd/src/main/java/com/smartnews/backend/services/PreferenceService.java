@@ -1,6 +1,10 @@
 package com.smartnews.backend.services;
 
+import com.smartnews.backend.dtos.IdValuePair;
+import com.smartnews.backend.dtos.PreferencesResponse;
 import com.smartnews.backend.dtos.UserPreference;
+import com.smartnews.backend.repositories.CategoryRepository;
+import com.smartnews.backend.repositories.SentimentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -9,6 +13,9 @@ import java.util.Set;
 
 @Service
 public class PreferenceService {
+    private CategoryRepository categoryRepository;
+    private SentimentRepository sentimentRepository ;
+
     public String changePreferenceContent(UserPreference userPreference) {
         StringBuilder preferenceContent = new StringBuilder();
         for (Integer categoryId : userPreference.getCategoryIds()) {
@@ -30,6 +37,17 @@ public class PreferenceService {
         }
         return preferenceIds;
     }
-
+    public PreferencesResponse getPreferences(){
+        PreferencesResponse preferencesResponse = new PreferencesResponse();
+        preferencesResponse.setCategories(
+                categoryRepository.findAll()
+                        .stream()
+                        .map(c -> new IdValuePair(c.getId(), c.getName()))
+                        .toList()
+        );
+        preferencesResponse.setSentiments(sentimentRepository.findAll().stream().map(
+                s->new IdValuePair(s.getId(),s.getType())).toList());
+        return preferencesResponse;
+    }
 
 }

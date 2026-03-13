@@ -36,12 +36,12 @@ public class News {
     @Column(name = "thumbnail")
     private String thumbnail;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY,optional = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY,optional = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "sentiment_id")
     private Sentiment sentiment;

@@ -1,0 +1,59 @@
+/* Preferences Selection Styles */
+.preferences-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pref-option {
+  cursor: pointer;
+  display: block;
+}
+
+.pref-option input {
+  display: none;
+}
+
+.pref-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: #f8fafb;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.pref-content i {
+  font-size: 1.2rem;
+  color: #b2bec3;
+}
+
+/* Preference Checked States */
+.pref-option[data-vibe="positive"] input:checked+.pref-content {
+  border-color: #55efc4;
+  background: #f0fff4;
+}
+
+.pref-option[data-vibe="neutral"] input:checked+.pref-content {
+  border-color: #fdcb6e;
+  background: #fffdf0;
+}
+
+.pref-option[data-vibe="negative"] input:checked+.pref-content {
+  border-color: #ff7675;
+  background: #fff5f5;
+}
+
+.pref-option[data-vibe="positive"] input:checked+.pref-content i {
+  color: #55efc4;
+}
+
+.pref-option[data-vibe="neutral"] input:checked+.pref-content i {
+  color: #fdcb6e;
+}
+
+.pref-option[data-vibe="negative"] input:checked+.pref-content i {
+  color: #ff7675;
+}

@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -33,7 +35,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToOne(mappedBy = "user",orphanRemoval = true)
-    private Preference preference;
+    @OneToMany(mappedBy = "user")
+    private List<Preference> preferences;
 
 }
