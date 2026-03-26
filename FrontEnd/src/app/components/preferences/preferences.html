@@ -1,52 +1,50 @@
-<div class="login-container">
-  <div class="login-card">
-    <div class="logo">
-      <img src="ab_logo.png" alt="Logo" class="logo-img" />
+<div class="login-page">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="logo">
+        <img src="ab_logo.png" alt="Logo" class="logo-img" />
+      </div>
+
+      <h2 class="headline">تخصيص الموجز</h2>
+      <p class="meta-data">اختر أنواع الأخبار التي تود رؤيتها</p>
+
+      <h3>المشاعر</h3>
+      <div class="preferences-grid">
+        <label *ngFor="let s of sentiments" class="pref-option" [attr.data-vibe]="getVibe(s.value)">
+          <input
+            type="checkbox"
+            [checked]="isSentimentSelected(s.id)"
+            (change)="toggleSentiment(s.id)"
+          />
+          <div class="pref-content">
+            <i
+              class="fas"
+              [ngClass]="{
+                'fa-smile': s.value === 'إيجابي',
+                'fa-meh': s.value === 'محايد',
+                'fa-frown': s.value === 'سلبي',
+              }"
+            ></i>
+            <span>{{ s.value }}</span>
+          </div>
+        </label>
+      </div>
+
+      <h3>الفئات</h3>
+      <div class="preferences-grid">
+        <label *ngFor="let c of categories" class="pref-option" data-vibe="category">
+          <input
+            type="checkbox"
+            [checked]="isCategorySelected(c.id)"
+            (change)="toggleCategory(c.id)"
+          />
+          <div class="pref-content">
+            <span>{{ c.value }}</span>
+          </div>
+        </label>
+      </div>
+
+      <button type="button" class="login-btn" (click)="savePreferences()">حفظ التفضيلات</button>
     </div>
-
-    <h2 class="headline" style="text-align: center; margin-bottom: 10px">تخصيص الموجز</h2>
-    <p class="meta-data" style="text-align: center; margin-bottom: 30px">
-      اختر أنواع الأخبار التي تود رؤيتها
-    </p>
-
-    <h3>المشاعر</h3>
-    <div class="preferences-grid">
-      <label *ngFor="let s of sentiments" class="pref-option">
-        <input
-          type="checkbox"
-          [checked]="isSentimentSelected(s.id)"
-          (change)="toggleSentiment(s.id)"
-        />
-        <div class="pref-content">
-          <i
-            class="fas"
-            Class="{
-            'fa-smile': s.value === 'إيجابي',
-            'fa-meh': s.value === 'محايد',
-            'fa-frown': s.value === 'سلبي'
-          }"
-          ></i>
-          <span>{{ s.value }}</span>
-        </div>
-      </label>
-    </div>
-
-    <h3>الفئات</h3>
-    <div class="preferences-grid">
-      <label *ngFor="let c of categories" class="pref-option">
-        <input
-          type="checkbox"
-          [checked]="isCategorySelected(c.id)"
-          (change)="toggleCategory(c.id)"
-        />
-        <div class="pref-content">
-          <span>{{ c.value }}</span>
-        </div>
-      </label>
-    </div>
-
-    <button type="button" class="login-btn" (click)="savePreferences()" style="margin-top: 30px">
-      حفظ التفضيلات
-    </button>
   </div>
 </div>

@@ -1164,175 +1164,183 @@
       <Position>8</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="348" parent="315" name="fk_news_on_category">
+    <column id="348" parent="315" name="embedding_array">
+      <Position>9</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="349" parent="315" name="credibility_score">
+      <Position>10</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <foreign-key id="350" parent="315" name="fk_news_on_category">
       <ColNames>category_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>category</RefTableName>
     </foreign-key>
-    <foreign-key id="349" parent="315" name="fk_news_on_sentiment">
+    <foreign-key id="351" parent="315" name="fk_news_on_sentiment">
       <ColNames>sentiment_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>sentiment</RefTableName>
     </foreign-key>
-    <index id="350" parent="315" name="PRIMARY">
+    <index id="352" parent="315" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="351" parent="315" name="id_UNIQUE">
+    <index id="353" parent="315" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="352" parent="315" name="fk_news_on_category">
+    <index id="354" parent="315" name="fk_news_on_category">
       <ColNames>category_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="353" parent="315" name="fk_news_on_sentiment">
+    <index id="355" parent="315" name="fk_news_on_sentiment">
       <ColNames>sentiment_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="354" parent="315" name="PRIMARY">
+    <key id="356" parent="315" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="355" parent="315" name="id_UNIQUE">
+    <key id="357" parent="315" name="id_UNIQUE">
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="356" parent="316" name="id">
+    <column id="358" parent="316" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="357" parent="316" name="user_id">
+    <column id="359" parent="316" name="user_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="358" parent="316" name="preference_content">
+    <column id="360" parent="316" name="preference_content">
       <Position>3</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="359" parent="316" name="chosen_at">
+    <column id="361" parent="316" name="chosen_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <foreign-key id="360" parent="316" name="fk_preferences_on_user_id">
+    <foreign-key id="362" parent="316" name="fk_preferences_on_user_id">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="361" parent="316" name="PRIMARY">
+    <index id="363" parent="316" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="362" parent="316" name="id_UNIQUE">
+    <index id="364" parent="316" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="363" parent="316" name="fk_preferences_on_user_id">
+    <index id="365" parent="316" name="fk_preferences_on_user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="364" parent="316" name="PRIMARY">
+    <key id="366" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="365" parent="316" name="id_UNIQUE">
+    <key id="367" parent="316" name="id_UNIQUE">
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="366" parent="317" name="id">
+    <column id="368" parent="317" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="367" parent="317" name="type">
+    <column id="369" parent="317" name="type">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(45)|0s</StoredType>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </column>
-    <index id="368" parent="317" name="PRIMARY">
+    <index id="370" parent="317" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="369" parent="317" name="id_UNIQUE">
+    <index id="371" parent="317" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="370" parent="317" name="PRIMARY">
+    <key id="372" parent="317" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="371" parent="317" name="id_UNIQUE">
+    <key id="373" parent="317" name="id_UNIQUE">
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="372" parent="318" name="id">
+    <column id="374" parent="318" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="373" parent="318" name="name">
+    <column id="375" parent="318" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="374" parent="318" name="user_name">
+    <column id="376" parent="318" name="user_name">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="375" parent="318" name="password">
+    <column id="377" parent="318" name="password">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="376" parent="318" name="role">
+    <column id="378" parent="318" name="role">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <index id="377" parent="318" name="PRIMARY">
+    <index id="379" parent="318" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="378" parent="318" name="id_UNIQUE">
+    <index id="380" parent="318" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="379" parent="318" name="user_name_UNIQUE">
+    <index id="381" parent="318" name="user_name_UNIQUE">
       <ColNames>user_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="380" parent="318" name="PRIMARY">
+    <key id="382" parent="318" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="381" parent="318" name="id_UNIQUE">
+    <key id="383" parent="318" name="id_UNIQUE">
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="382" parent="318" name="user_name_UNIQUE">
+    <key id="384" parent="318" name="user_name_UNIQUE">
       <UnderlyingIndexName>user_name_UNIQUE</UnderlyingIndexName>
     </key>
   </database-model>

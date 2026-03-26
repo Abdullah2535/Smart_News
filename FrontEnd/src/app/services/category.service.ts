@@ -1,28 +1,48 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+// 1. IMPORT YOUR MODEL
 import { PreferencesResponse } from '../models/category.model';
+import { UserNews } from '../models/news.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
-  constructor() {}
+  private apiUrl = `${environment.apiUrl}`;
+  private apiUrlGet = `${this.apiUrl}preferences`;
+  private apiUrlSave = `${this.apiUrl}news/userP`;
 
-  // Simulate API call
+  constructor(private http: HttpClient) {}
+
   getPreferences(): Observable<PreferencesResponse> {
-    const body: PreferencesResponse = {
-      sentiments: [
-        { id: 1, value: 'إيجابي' },
-        { id: 2, value: 'محايد' },
-        { id: 3, value: 'سلبي' },
-      ],
-      categories: [
-        { id: 6, value: 'إقتصاد' },
-        { id: 5, value: 'العالم' },
-        { id: 7, value: 'رياضة' },
-        { id: 4, value: 'مصر' },
-      ],
+    // 1. Grab the token from localStorage (Check your login component to see what you named this key!)
+    const token = localStorage.getItem('token');
+
+    // 2. Attach it to the Authorization header
+    let headers = new HttpHeaders();
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
+
+    // 3. Send the request with the headers
+    return this.http.get<PreferencesResponse>(this.apiUrlGet, { headers: headers });
+  }
+
+  saveUserPreferences(sentimentIds: number[], categoryIds: number[]): Observable<UserNews[]> {
+    const token = localStorage.getItem('token');
+
+    let headers = new HttpHeaders();
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
+
+    const payload = {
+      sentimentIds: sentimentIds,
+      categoryIds: categoryIds,
     };
-    return of(body);
+
+    return this.http.post<UserNews[]>(this.apiUrlSave, payload, { headers: headers });
   }
 }

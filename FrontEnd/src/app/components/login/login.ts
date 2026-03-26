@@ -42,7 +42,7 @@ export class LoginComponent {
 
           this.userService.setCurrentUser({ username: this.loginForm.value.userName });
 
-          this.router.navigate(['/preferences']); // Redirect to the main news feed
+          this.router.navigate(['preferences']); // Redirect to the main news feed
         },
         error: (err) => {
           this.isLoading = false;

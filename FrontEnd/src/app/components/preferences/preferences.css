@@ -1,8 +1,95 @@
-/* Preferences Selection Styles */
+/* --- 1. THE LAYOUT & CARD STYLES (From your old login) --- */
+.login-page {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: var(--bg-color, #f4f6f8);
+  /* Fallback added just in case */
+  overflow-y: auto;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  /* This is the magic line that stops it from taking the whole screen! */
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.login-card {
+  width: 100%;
+  background: var(--card-bg, #ffffff);
+  padding: 40px 30px;
+  border-radius: 24px;
+  border: 2px solid var(--accent, #3eb6a8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.logo-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main, #2d3436);
+  background: linear-gradient(45deg, var(--accent, #00cec9), #3eb6a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+/* --- 2. THE BUTTON STYLES --- */
+.login-btn {
+  display: block;
+  /* ⬅️ Forces the button to respect the margin auto */
+  width: 100%;
+  max-width: 280px;
+  /* ⬅️ Stops it from being too wide */
+  margin: 30px auto 0 auto !important;
+  /* ⬅️ Pushes it exactly to the middle */
+  background: var(--accent, #3eb6a8);
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #2b998d;
+  transform: translateY(-2px);
+}
+
+.login-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* --- 3. THE NEW PREFERENCES GRID STYLES --- */
 .preferences-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .pref-option {
@@ -17,43 +104,97 @@
 .pref-content {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
-  background: #f8fafb;
-  border: 2px solid transparent;
+  justify-content: center;
+  /* ⬅️ This forces the text and icon to the dead center */
+  gap: 10px;
+  padding: 14px 20px;
+  background: #ffffff;
+  /* Clean white background */
+  border: 2px solid #dfe6e9;
+  /* A nice, neutral gray border for unselected items */
   border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #636e72;
+  /* Neutral gray text when unselected */
   transition: all 0.3s ease;
 }
 
-.pref-content i {
-  font-size: 1.2rem;
-  color: #b2bec3;
-}
-
-/* Preference Checked States */
+/* Checked States Logic (Sentiments) */
 .pref-option[data-vibe="positive"] input:checked+.pref-content {
   border-color: #55efc4;
   background: #f0fff4;
+  color: #00b894;
 }
 
 .pref-option[data-vibe="neutral"] input:checked+.pref-content {
   border-color: #fdcb6e;
   background: #fffdf0;
+  color: #e1b12c;
 }
 
 .pref-option[data-vibe="negative"] input:checked+.pref-content {
   border-color: #ff7675;
   background: #fff5f5;
+  color: #d63031;
 }
 
-.pref-option[data-vibe="positive"] input:checked+.pref-content i {
-  color: #55efc4;
+/* Checked State Logic (Categories) */
+.pref-option[data-vibe="category"] input:checked+.pref-content {
+  border-color: #74b9ff;
+  background: #e3f2fd;
+  color: #0984e3;
 }
 
-.pref-option[data-vibe="neutral"] input:checked+.pref-content i {
-  color: #fdcb6e;
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
 }
 
-.pref-option[data-vibe="negative"] input:checked+.pref-content i {
-  color: #ff7675;
+/* --- TEXT & HEADING STYLES --- */
+
+.headline {
+  text-align: center;
+  font-size: 28px;
+  /* Hardcoded size so it is noticeably larger */
+  font-weight: 900;
+  /* Maximum boldness */
+  color: #000000;
+  /* Pure black so it stands out */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.meta-data {
+  text-align: center;
+  font-size: 16px t;
+  font-weight: 600;
+  /* Slightly thicker */
+  color: #636e72;
+  /* Clean, modern gray */
+  margin-top: 0;
+  margin-bottom: 35px
+}
+
+/* Styling the "المشاعر" and "الفئات" headings */
+.login-card h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* Adds a small, elegant teal underline beneath the h3 text */
+.login-card h3::after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: var(--accent, #3eb6a8);
+  /* Uses your SmartNews teal color */
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
 }

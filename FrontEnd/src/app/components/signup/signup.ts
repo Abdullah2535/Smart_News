@@ -36,7 +36,7 @@ export class SignupComponent {
         next: (response) => {
           console.log('User saved successfully!', response);
           // Route to the login page
-          this.router.navigate(['/login']);
+          this.router.navigate(['login']);
         },
         error: (err) => {
           console.error('Error saving user', err);

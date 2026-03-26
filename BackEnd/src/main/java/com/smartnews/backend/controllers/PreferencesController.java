@@ -17,8 +17,7 @@ public class PreferencesController {
 
     @GetMapping("")
     public ResponseEntity<PreferencesResponse> getPreferences() {
-
-        var preferencesResponse= preferenceService.getPreferences();
+        var preferencesResponse = preferenceService.getPreferences();
         return ResponseEntity.ok(preferencesResponse);
     }
 }

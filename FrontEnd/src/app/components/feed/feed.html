@@ -1,0 +1,15 @@
+<main class="feed-wrapper">
+  <div class="scroll-container">
+    @for (item of newsList; track item.headline) {
+      <app-news-card [article]="item"></app-news-card>
+    } @empty {
+      <p style="text-align: center; margin-top: 50px">جاري تحميل الأخبار...</p>
+    }
+  </div>
+</main>
+
+<footer class="bottom-bar">
+  <a routerLink="/preferences" class="pref-btn" title="ضبط التفضيلات">
+    <i class="fas fa-cog"></i>
+  </a>
+</footer>

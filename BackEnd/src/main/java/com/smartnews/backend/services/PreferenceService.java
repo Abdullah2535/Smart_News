@@ -5,6 +5,7 @@ import com.smartnews.backend.dtos.PreferencesResponse;
 import com.smartnews.backend.dtos.UserPreference;
 import com.smartnews.backend.repositories.CategoryRepository;
 import com.smartnews.backend.repositories.SentimentRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -12,6 +13,7 @@ import java.util.Set;
 
 
 @Service
+@AllArgsConstructor
 public class PreferenceService {
     private CategoryRepository categoryRepository;
     private SentimentRepository sentimentRepository ;

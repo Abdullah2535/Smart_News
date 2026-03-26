@@ -30,13 +30,16 @@ export class PreferencesComponent implements OnInit {
     this.selectedSentiments = storedSentiments ? JSON.parse(storedSentiments) : [];
     this.selectedCategories = storedCategories ? JSON.parse(storedCategories) : [];
 
-    this.categoryService.getPreferences().subscribe((res) => {
+    // 3. important detail HERE
+    // Because the service returns an Observable<PreferencesResponse>,
+    // res.sentiments' is automatically recognized as an array of IdValuePair!
+    this.categoryService.getPreferences().subscribe((res: PreferencesResponse) => {
       this.sentiments = res.sentiments;
       this.categories = res.categories;
 
-      // If nothing in localStorage, select all by default
-      if (!storedSentiments) this.selectedSentiments = this.sentiments.map((s) => s.id);
-      if (!storedCategories) this.selectedCategories = this.categories.map((c) => c.id);
+      //leaving the buttons unselected
+      if (!storedSentiments) this.selectedSentiments = [];
+      if (!storedCategories) this.selectedCategories = [];
     });
   }
 
@@ -53,11 +56,32 @@ export class PreferencesComponent implements OnInit {
   }
 
   savePreferences() {
+    // 1. Save locally for fast frontend rendering
     localStorage.setItem('selectedSentiments', JSON.stringify(this.selectedSentiments));
     localStorage.setItem('selectedCategories', JSON.stringify(this.selectedCategories));
 
-    // Navigate to next component
-    this.router.navigate(['/news']);
+    // 2. Send to Spring Boot Database!
+    console.log('🚀 1. Button clicked, starting request...');
+
+    this.categoryService
+      .saveUserPreferences(this.selectedSentiments, this.selectedCategories)
+      .subscribe({
+        next: (newsResponse) => {
+          // We ONLY navigate inside this block
+          if (newsResponse && newsResponse.length > 0) {
+            console.log('✅ 2. Data received, NOW navigating:', newsResponse);
+
+            this.router.navigateByUrl('/news', {
+              state: { feedData: newsResponse },
+            });
+          } else {
+            console.warn('⚠️ Backend returned empty news list.');
+          }
+        },
+        error: (err) => {
+          console.error('❌ 2. Backend error:', err);
+        },
+      });
   }
 
   isSentimentSelected(id: number): boolean {
@@ -66,5 +90,13 @@ export class PreferencesComponent implements OnInit {
 
   isCategorySelected(id: number): boolean {
     return this.selectedCategories.includes(id);
+  }
+
+  // --- NEW METHOD FOR CSS COLORS ---
+  getVibe(value: string): string {
+    if (value === 'إيجابي') return 'positive';
+    if (value === 'محايد') return 'neutral';
+    if (value === 'سلبي') return 'negative';
+    return 'neutral';
   }
 }

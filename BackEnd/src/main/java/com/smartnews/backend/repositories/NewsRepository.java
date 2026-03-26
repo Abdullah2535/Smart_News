@@ -3,6 +3,7 @@ package com.smartnews.backend.repositories;
 import com.smartnews.backend.dtos.NewsForAiDto;
 import com.smartnews.backend.dtos.UserNews;
 import com.smartnews.backend.entities.News;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -21,4 +22,14 @@ public interface NewsRepository extends JpaRepository<News, Integer>,CustomNewsU
 )
 List<UserNews> findBySentimentAndCategory(@Param("categoryIds") Set<Integer> categoryIds,
                                           @Param("sentimentIds") Set<Integer> sentimentIds);
+
+    @Query(value = "SELECT id FROM news WHERE news.headline LIKE CONCAT('%', :keyword, '%')", nativeQuery = true)
+    List<Integer> findByHeadlineContainingIgnoreCase(@Param("keyword")String keyword);
+
+    List<News> findAllByIdIn( List<Integer> articleIds);
+
+    List<News> findByIdIn(List<Integer> articleIds);
+
+    @Query(value = "SELECT id, embedding_array AS embeddingArray FROM news WHERE embedding_array IS NOT NULL", nativeQuery = true)
+    List<VectorOnlyProjection> findAllVectorsOnly();
 }

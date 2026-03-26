@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseMigrationSettings" lastSelectedDirectory="BackEnd/src/main/resources/db/migration" />
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="news#article_url" tagName="modifyDataType" />
+    <exclude-change idName="news#article_url" tagName="dropNotNullConstraint" />
+    <exclude-change idName="news#headline" tagName="modifyDataType" />
+    <exclude-change idName="news#headline" tagName="dropNotNullConstraint" />
+    <exclude-change idName="news#published_at" tagName="dropNotNullConstraint" />
+    <exclude-change idName="news#source" tagName="modifyDataType" />
+    <exclude-change idName="news#source" tagName="dropNotNullConstraint" />
+    <exclude-change idName="news#thumbnail" tagName="modifyDataType" />
+  </component>
+</project>

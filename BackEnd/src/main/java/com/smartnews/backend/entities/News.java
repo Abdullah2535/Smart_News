@@ -6,8 +6,10 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.type.SqlTypes;
 
 import java.time.Instant;
 
@@ -35,6 +37,13 @@ public class News {
 
     @Column(name = "thumbnail")
     private String thumbnail;
+
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(name = "embedding_array", columnDefinition = "json")
+    private double[] embeddingArray;
+
+    @Column(name = "credibility_score")
+    private Float credibilityScore;
 
     @ManyToOne(fetch = FetchType.LAZY,optional = true)
     @OnDelete(action = OnDeleteAction.CASCADE)

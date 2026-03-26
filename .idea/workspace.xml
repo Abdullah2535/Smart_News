@@ -4,45 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="285f69a9-5d51-4c9f-94c2-a5aedfd185c8" name="Changes" comment="a skeleton for the frontend">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/PreferencesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/IdValuePair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/PreferencesResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/SentimentRepository.java" afterDir="false" />
+    <list default="true" id="285f69a9-5d51-4c9f-94c2-a5aedfd185c8" name="Changes" comment="adding more capabilities">
+      <change afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/OllamaEmbedRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/OllamaEmbedResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/OllamaGenerateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/OllamaGenerateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/SearchResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/VectorOnlyProjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/services/EmbeddingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/services/SearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/services/SentimentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/services/VectorGenerationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V2__adding_embedding_array.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V3__adding_credibility_score.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f1f8c817-f74c-4707-8d9b-c108adef1166.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f1f8c817-f74c-4707-8d9b-c108adef1166.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/diff-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/BackEndApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/BackEndApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/PreferencesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/PreferencesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/UpdateSentimentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/UpdateSentimentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/UserPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/dtos/UserPreference.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Preference.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Preference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Sentiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/Sentiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V1__initial_migration.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V1__initial_migration.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V2__modifying_password_col.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V3__editing_two_tables.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/migration/V4__modifying_preference_id.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/mappers/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/mappers/NewsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/NewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/NewsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/NewsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/repositories/NewsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/services/PreferenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/services/PreferenceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/header/header.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/header/header.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/header/header.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/header/header.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/news/news.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/news/news.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/news/news.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/news/news.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/news/news.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/news/news.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/news/news.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/news/news.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/preferences/preferences.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/preferences/preferences.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/preferences/preferences.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/preferences/preferences.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/preferences/preferences.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/preferences/preferences.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/signup/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/signup/signup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/services/category.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/category.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +59,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.intellij.jpb.JpaEntity" />
-        <option value="Interface" />
         <option value="com.intellij.jpb.JpaRepository" />
+        <option value="com.intellij.jpb.NewClass" />
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -89,47 +97,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #3.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BackEnd [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:info].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:migrate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:repair].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackEndApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/1- Graduation Project/Implementation/BackEnd&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Angular CLI Server (FrontEnd).executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\1- Graduation Project\\Implementation\\FrontEnd\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DtoCreateDialog.EQUALS_HASH_CODE_INITIAL_PROP_KEY": "false",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "HTTP Request.generated-requests | #3.executor": "Run",
+    "HTTP Request.generated-requests | #6.executor": "Run",
+    "Maven.BackEnd [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:clean].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:info].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:migrate].executor": "Run",
+    "Maven.BackEnd [org.flywaydb:flyway-maven-plugin:11.7.2:repair].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BackEndApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/1- Graduation Project/Implementation/BackEnd/src/main/resources/db/migration",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Angular CLI Server (FrontEnd).executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "D:\\1- Graduation Project\\Implementation\\FrontEnd\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\1- Graduation Project\Implementation\BackEnd" />
@@ -154,6 +164,9 @@
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#3" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#6" index="6" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Angular Application (FrontEnd)" type="JavascriptDebugType" uri="http://localhost:4200">
@@ -183,6 +196,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.generated-requests | #6" />
       <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="HTTP Request.generated-requests | #3" />
@@ -192,6 +206,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #6" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
@@ -241,6 +256,14 @@
       <workItem from="1773067777043" duration="18503000" />
       <workItem from="1773232753345" duration="13771000" />
       <workItem from="1773402935794" duration="2264000" />
+      <workItem from="1773414283602" duration="2401000" />
+      <workItem from="1773664761863" duration="7262000" />
+      <workItem from="1773800533552" duration="16220000" />
+      <workItem from="1773844042273" duration="2572000" />
+      <workItem from="1773945428311" duration="1656000" />
+      <workItem from="1774021990283" duration="8627000" />
+      <workItem from="1774112694006" duration="1397000" />
+      <workItem from="1774451513666" duration="34778000" />
     </task>
     <task id="LOCAL-00001" summary="initial_migration">
       <option name="closed" value="true" />
@@ -282,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772244680778</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adding more capabilities">
+      <option name="closed" value="true" />
+      <created>1773414741293</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1773414741293</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,16 +324,12 @@
     <MESSAGE value="basic implementation for the backend" />
     <MESSAGE value="a near complete vision for the backend" />
     <MESSAGE value="a skeleton for the frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="a skeleton for the frontend" />
+    <MESSAGE value="adding more capabilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding more capabilities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/NewsController.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/AuthController.java</url>
           <line>36</line>
@@ -322,16 +349,6 @@
           <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/UserController.java</url>
           <line>62</line>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/controllers/PreferencesController.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/smartnews/backend/filters/LoggingFilter.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

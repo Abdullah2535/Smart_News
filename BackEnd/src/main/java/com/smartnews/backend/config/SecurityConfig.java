@@ -85,8 +85,10 @@ public class SecurityConfig {
                                 //user for ai
                                 .requestMatchers(HttpMethod.PUT,"/news/ai").permitAll()
                                 .requestMatchers(HttpMethod.GET,"/news/ai").permitAll()
-                                .requestMatchers(HttpMethod.GET,"preferences/").authenticated()
+
+                                .requestMatchers(HttpMethod.GET,"/preferences").authenticated()
                                 .requestMatchers(HttpMethod.POST,"/news/userP").authenticated()
+                                .requestMatchers(HttpMethod.GET,"/news/search").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/auth/refresh").permitAll()
                                 .anyRequest().authenticated()
@@ -106,7 +108,7 @@ public class SecurityConfig {
 public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration configuration = new CorsConfiguration();
 
-    configuration.setAllowedOrigins(List.of("http://localhost:4200"));
+    configuration.setAllowedOrigins(List.of("http://192.168.1.105:4200","http://localhost:4200"));
 
     // Allow common HTTP methods
     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));

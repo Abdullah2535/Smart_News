@@ -7,7 +7,6 @@ import java.util.Set;
 
 @Getter
 public class UserPreference {
-    private Integer userId;
     private Set<Integer> categoryIds;
     private Set<Integer> sentimentIds;
 }
