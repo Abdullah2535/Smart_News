@@ -5,6 +5,7 @@ import { authGuard } from './guards/auth.guard';
 import { SignupComponent } from './components/signup/signup';
 import { PreferencesComponent } from './components/preferences/preferences';
 import { FeedComponent } from './components/feed/feed';
+import { NavigationHub } from './components/navigation-hub/navigation-hub';
 
 // Import your standalone components
 // import { DashboardComponent } from './dashboard/dashboard.component';
@@ -34,6 +35,8 @@ export const routes: Routes = [
     component: FeedComponent,
     canActivate: [authGuard],
   },
-  // If the user types a fake URL, it safely redirects them back to the news.
-  { path: '**', redirectTo: 'feed' },
+  // If the user types a fake URL, it safely redirects them back to the hub.
+  { path: '**', redirectTo: 'hub', pathMatch: 'full' },
+
+  { path: 'hub', component: NavigationHub, canActivate: [authGuard] },
 ];

@@ -1,0 +1,89 @@
+<div
+  class="navigation-hub-container min-h-screen flex flex-col items-center justify-center p-6 bg-slate-50"
+  dir="rtl"
+>
+  <div class="logo-wrapper mb-12 animate-fade-in">
+    <img src="ab_logo.png" alt="SmartNews" class="h-16 w-auto object-contain" />
+  </div>
+
+  <div
+    class="search-card w-full max-w-xl bg-white rounded-[32px] p-8 shadow-xl shadow-teal-900/5 border border-slate-100"
+  >
+    <h2 class="text-2xl font-extrabold text-slate-800 mb-8 text-center">
+      ما هي الأخبار التي تهمك اليوم؟
+    </h2>
+
+    <form class="space-y-6" (ngSubmit)="onSearchClick()">
+      <div class="input-group flex flex-col gap-2">
+        <label for="search-input" class="text-sm font-bold text-slate-500 mr-2">كلمات البحث</label>
+        <div class="relative">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+            >search</span
+          >
+
+          <input
+            type="text"
+            id="search-input"
+            name="keyword"
+            [(ngModel)]="searchKeyword"
+            placeholder="ابحث عن موضوع أو حدث معين..."
+            class="w-full bg-slate-50 border-none rounded-2xl py-4 pr-6 pl-12 text-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-teal-500/20 transition-all"
+          />
+        </div>
+      </div>
+
+      <div class="input-group flex flex-col gap-2">
+        <label for="limit-input" class="text-sm font-bold text-slate-500 mr-2">عدد المقالات</label>
+        <div class="relative">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+            >format_list_numbered_rtl</span
+          >
+
+          <input
+            type="number"
+            id="limit-input"
+            name="limit"
+            [(ngModel)]="articleLimit"
+            class="w-full bg-slate-50 border-none rounded-2xl py-4 pr-6 pl-12 text-slate-700 focus:ring-2 focus:ring-teal-500/20 transition-all"
+          />
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-4">
+        <button
+          type="button"
+          routerLink="/preferences"
+          class="btn-secondary flex items-center justify-center gap-2 border-2 border-[#3eb6a8] text-[#3eb6a8] hover:bg-teal-50 font-bold py-4 px-6 rounded-2xl transition-all active:scale-95"
+        >
+          <span class="material-symbols-outlined">explore</span>
+          <span>تصفح الأخبار</span>
+        </button>
+
+        <button
+  type="submit"
+  [disabled]="isLoading"
+  class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-10 py-4 rounded-2xl shadow-lg shadow-teal-600/20 transition-all active:scale-95 flex items-center justify-center gap-2 min-w-[140px] disabled:opacity-70 disabled:cursor-not-allowed"
+>
+  <ng-container *ngIf="!isLoading">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    بحث
+  </ng-container>
+
+  <ng-container *ngIf="isLoading">
+    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+    جاري البحث...
+  </ng-container>
+</button>
+      </div>
+    </form>
+  </div>
+
+  <p class="mt-8 text-slate-400 text-sm font-medium">
+    ابقَ على اطلاع دائم بأحدث المستجدات العالمية
+  </p>
+</div>

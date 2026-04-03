@@ -9,5 +9,5 @@ import { LoginComponent } from './components/login/login';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  protected readonly title = signal('FrontEnd');
+  protected readonly title = signal('Smart News');
 }

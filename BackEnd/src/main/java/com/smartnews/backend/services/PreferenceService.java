@@ -8,8 +8,7 @@ import com.smartnews.backend.repositories.SentimentRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.Set;
+
 
 
 @Service
@@ -20,22 +19,32 @@ public class PreferenceService {
 
     public String changePreferenceContent(UserPreference userPreference) {
         StringBuilder preferenceContent = new StringBuilder();
+        preferenceContent.append("C,");
         for (Integer categoryId : userPreference.getCategoryIds()) {
             preferenceContent.append(categoryId).append(",");
         }
+        preferenceContent.append("S,");
         for (Integer categoryId : userPreference.getSentimentIds()) {
             preferenceContent.append(categoryId).append(",");
         }
         preferenceContent.deleteCharAt(preferenceContent.length() - 1);
         return preferenceContent.toString();
     }
-    public Set<Integer> getPreferenceIds(String preferenceContent) {
-        Set<Integer> preferenceIds = new HashSet<>();
+    public UserPreference getPreferenceIds(String preferenceContent) {
+        UserPreference preferenceIds = new UserPreference();
         if (preferenceContent == null || preferenceContent.isEmpty()) {
             return preferenceIds;
         }
+        char type = preferenceContent.charAt(0);
         for (String preferenceId : preferenceContent.split(",")) {
-            preferenceIds.add(Integer.parseInt(preferenceId));
+           if (preferenceId.charAt(preferenceId.length() - 1) == 'S') {
+               type = 'S';
+           }
+            if (type == 'C') {
+                preferenceIds.getCategoryIds().add(Integer.parseInt(preferenceId));
+            }
+            else
+                preferenceIds.getSentimentIds().add(Integer.parseInt(preferenceId));
         }
         return preferenceIds;
     }

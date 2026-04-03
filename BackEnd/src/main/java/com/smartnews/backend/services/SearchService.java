@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -57,7 +56,7 @@ public class SearchService {
                 .map(Map.Entry::getKey)
                 .toList();
         // --- 3. THE MERGE (Combining Both Brains) ---
-        // We use a LinkedHashSet because it automatically removes duplicates AND keeps the order!
+        // A LinkedHashSet because it automatically removes duplicates AND keeps the order!
         Set<Integer> mergedIdsSet = new LinkedHashSet<>();
 
         // Add exact matches FIRST (they are guaranteed to be highly relevant)

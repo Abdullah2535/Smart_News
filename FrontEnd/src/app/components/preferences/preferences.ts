@@ -71,7 +71,7 @@ export class PreferencesComponent implements OnInit {
           if (newsResponse && newsResponse.length > 0) {
             console.log('✅ 2. Data received, NOW navigating:', newsResponse);
 
-            this.router.navigateByUrl('/news', {
+            this.router.navigateByUrl('/feed', {
               state: { feedData: newsResponse },
             });
           } else {

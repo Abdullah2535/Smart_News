@@ -6,13 +6,13 @@ import { UserNews } from '../../models/news.model';
 import { registerLocaleData } from '@angular/common';
 import localeArSa from '@angular/common/locales/ar-SA';
 import { ArabicNumberPipe } from './arabic-number.pipe';
-//   Register it so the DatePipe can use it
+//   Register the DatePipe can use it
 registerLocaleData(localeArSa);
 
 @Component({
   selector: 'app-news-card',
   standalone: true,
-  imports: [CommonModule, ArabicNumberPipe], // ⬅️ Add it here
+  imports: [CommonModule, ArabicNumberPipe],
   templateUrl: './news-card.html',
   styleUrls: ['./news-card.css'],
 })
@@ -35,5 +35,21 @@ export class NewsCard {
   // Backup safety net: If the URL is broken and fails to load in the browser
   handleImageError(event: any) {
     event.target.src = 'default-news.webp';
+  }
+  // ⚡ The new helper method to safely handle the math!
+  getCredibilityColor(score?: number): string {
+    // 1. Safety check: If it's undefined, return a neutral gray color
+    if (score === undefined || score === null) {
+      return 'text-slate-400';
+    }
+    
+    // 2. The logic
+    if (score >= 0.7) {
+      return 'text-emerald-500'; // High credibility
+    } else if (score >= 0.4) {
+      return 'text-amber-500';   // Medium credibility
+    } else {
+      return 'text-rose-500';    // Low credibility
+    }
   }
 }

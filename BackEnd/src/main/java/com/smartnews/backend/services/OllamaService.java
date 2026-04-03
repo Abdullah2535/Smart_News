@@ -9,22 +9,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class SentimentService {
+public class OllamaService {
 
     private final RestTemplate restTemplate = new RestTemplate();
     private final String OLLAMA_URL = "http://localhost:11434/api/generate";
     private final String MODEL_NAME = "qwen2.5:3b";
 
-    // 1. PUBLIC METHOD: Takes a list, returns a list
+
     public List<Integer> analyzeSentimentBatch(List<String> headlines) {
         // Using parallelStream() here sends multiple requests to Ollama simultaneously,
-        // making the process significantly faster than a standard for-loop!
+        // making the process significantly faster than a standard for-loop
         return headlines.parallelStream()
                 .map(this::analyzeSingleSentiment)
                 .collect(Collectors.toList());
     }
 
-    // 2. PRIVATE HELPER: The exact logic, isolated for a single headline
     public int analyzeSingleSentiment(String headline) {
         String prompt = "أنت خبير في تحليل الأخبار. اقرأ هذا العنوان الإخباري: [" + headline + "]\n" +
                 "حدد المشاعر بناءً على هذه القواعد الصارمة:\n" +
@@ -90,7 +89,7 @@ public class SentimentService {
                     int score = Integer.parseInt(justTheNumber);
                     if (score >= 1 && score <= 5) {
 
-                        // THE MATH: Converts 5 to 1.0, 4 to 0.8, 3 to 0.6, etc.
+                        // Converts 5 to 1.0, 4 to 0.8, 3 to 0.6, etc.
                         return score / 5.0f;
                     }
                 }

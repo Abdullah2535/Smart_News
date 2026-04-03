@@ -88,6 +88,7 @@ public class SecurityConfig {
 
                                 .requestMatchers(HttpMethod.GET,"/preferences").authenticated()
                                 .requestMatchers(HttpMethod.POST,"/news/userP").authenticated()
+                                .requestMatchers(HttpMethod.GET,"/news/myFeed").authenticated()
                                 .requestMatchers(HttpMethod.GET,"/news/search").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/auth/refresh").permitAll()

@@ -3,8 +3,7 @@ package com.smartnews.backend.services;
 import com.smartnews.backend.dtos.NewsForAiDto;
 import com.smartnews.backend.dtos.UpdateSentimentDto;
 import com.smartnews.backend.repositories.NewsRepository;
-import com.smartnews.backend.services.EmbeddingService;
-import com.smartnews.backend.services.SentimentService;
+
 import lombok.AllArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -14,11 +13,11 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class VectorGenerationService {
+public class OrchestrationService {
 
     private final NewsRepository newsRepository;
     private final EmbeddingService embeddingService;
-    private final SentimentService sentimentService;
+    private final OllamaService ollamaService;
 
     @Async
     @Transactional
@@ -54,9 +53,9 @@ public class VectorGenerationService {
             orderedHeadlines.add(safeHeadline);
 
             // 1. Ask Qwen for Sentiment (Waits for answer)
-            int score = sentimentService.analyzeSingleSentiment(safeHeadline);
+            int score = ollamaService.analyzeSingleSentiment(safeHeadline);
             // 2. Ask Qwen for Credibility (Waits for answer)
-            Float credibilityScore = sentimentService.analyzeCredibility(safeHeadline);
+            Float credibilityScore = ollamaService.analyzeCredibility(safeHeadline);
 
             // Build the Save DTO
             UpdateSentimentDto dto = new UpdateSentimentDto();

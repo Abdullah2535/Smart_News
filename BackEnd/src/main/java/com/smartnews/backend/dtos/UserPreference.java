@@ -1,11 +1,11 @@
 package com.smartnews.backend.dtos;
 
 
-import lombok.Getter;
+import lombok.Data;
 
 import java.util.Set;
 
-@Getter
+@Data
 public class UserPreference {
     private Set<Integer> categoryIds;
     private Set<Integer> sentimentIds;

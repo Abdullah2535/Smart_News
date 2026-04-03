@@ -8,12 +8,13 @@ import com.smartnews.backend.repositories.PreferenceRepository;
 import com.smartnews.backend.repositories.UserRepository;
 import com.smartnews.backend.services.PreferenceService;
 import com.smartnews.backend.services.SearchService;
-import com.smartnews.backend.services.VectorGenerationService;
+import com.smartnews.backend.services.OrchestrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ import java.util.List;
 public class NewsController {
   private final PreferenceRepository preferenceRepository;
   private final UserRepository userRepository;
-  private final VectorGenerationService vectorGenerationService;
+  private final OrchestrationService orchestrationService;
   private NewsMapper newsMapper;
   private NewsRepository newsRepository;
   private PreferenceService preferenceService;
@@ -47,7 +48,7 @@ public class NewsController {
 
         // 2. Hand the list of IDs to your orchestrator
         // (This will fetch the text, get Qwen sentiment, get Nomic vectors, and save to DB)
-        vectorGenerationService.processPendingArticles();
+        orchestrationService.processPendingArticles();
 
         // 3. Return success message to Python
         return ResponseEntity.accepted().body("AI Pipeline Triggered! Scanning database for empty articles...");
@@ -80,6 +81,27 @@ public class NewsController {
 
         List<SearchResultDto> results = searchService.searchNews(query, limit);
         return ResponseEntity.ok(results);
+    }
+    @GetMapping("myFeed")
+    public ResponseEntity<List<UserNews>> getMyFeed(Principal principal) {
+        // 1. Get the current logged-in user's ID
+        Integer userId = Integer.valueOf(principal.getName());
+
+        // 2. Look up their most recently saved preferences
+        String choices = preferenceRepository.findTopPreferenceContentByChosenAtDEC(userId);
+
+        // 3. The Cold Start Check: If they are a brand-new user with no preferences yet
+        if (choices == null ) {
+            return ResponseEntity.ok(Collections.emptyList()); // Return an empty array safely
+        }
+       var userPrefs = preferenceService.getPreferenceIds(choices);
+        // 4. If they DO have preferences, fetch and return their custom news!
+        var news = newsRepository.findBySentimentAndCategory(
+                userPrefs.getCategoryIds(),
+                userPrefs.getSentimentIds()
+        );
+
+        return ResponseEntity.ok().body(news);
     }
 
 

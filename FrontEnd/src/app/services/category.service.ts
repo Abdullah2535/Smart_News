@@ -11,8 +11,8 @@ import { environment } from '../../environments/environment';
 })
 export class CategoryService {
   private apiUrl = `${environment.apiUrl}`;
-  private apiUrlGet = `${this.apiUrl}preferences`;
-  private apiUrlSave = `${this.apiUrl}news/userP`;
+  private apiUrlGet = `${this.apiUrl}/preferences`;
+  private apiUrlSave = `${this.apiUrl}/news/userP`;
 
   constructor(private http: HttpClient) {}
 

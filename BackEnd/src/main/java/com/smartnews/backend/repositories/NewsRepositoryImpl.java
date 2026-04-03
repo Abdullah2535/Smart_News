@@ -28,7 +28,7 @@ public class NewsRepositoryImpl implements CustomNewsUpdateRepository{
                 // Set Parameter 1: The sentiment ID
                 ps.setInt(1, dto.getSentimentId());
 
-                // Set Parameter 2: The NEW Credibility Score
+                // Set Parameter 2: The Credibility Score
                 if (dto.getCredibilityScore() != null) {
                     ps.setFloat(2, dto.getCredibilityScore());
                 } else {
