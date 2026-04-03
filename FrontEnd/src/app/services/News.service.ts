@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UserNews } from '../models/news.model';
 import { environment } from '../../environments/environment';
@@ -19,6 +19,6 @@ export class NewsService {
 searchNews(keyword: string, limit: number): Observable<UserNews[]> {
   const searchUrl = `${this.apiUrl}/news/search?query=${encodeURIComponent(keyword)}&limit=${limit}`;
   // The interceptor will automatically catch this and add the Bearer token!
-  return this.http.get<UserNews[]>(searchUrl); 
+  return this.http.get<UserNews[]>(searchUrl);
 }
 }
