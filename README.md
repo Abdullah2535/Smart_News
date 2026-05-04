@@ -69,10 +69,20 @@ test set, including scraping, sentiment extraction, and vectorization—in under
 minutes, demonstrating its readiness for production-level news aggregation.
 
 <img width="352" height="525" alt="login" src="https://github.com/user-attachments/assets/5abdaf6a-58a2-4fab-aa73-9890b864e363" />
+
+
 <img width="529" height="821" alt="image" src="https://github.com/user-attachments/assets/2cc2cda3-1470-49db-9d7e-443eb5d1af27" />
+
+
 <img width="866" height="947" alt="image" src="https://github.com/user-attachments/assets/048b9e86-1756-4de0-82fc-def1c8dc9f05" />
+
+
 <img width="630" height="864" alt="image" src="https://github.com/user-attachments/assets/ac8a7215-6394-404a-a229-7fd5d0ce20ea" />
+
+
 <img width="644" height="839" alt="image" src="https://github.com/user-attachments/assets/7d7b442c-3515-4a0c-942f-283270ee210b" />
+
+
 <img width="779" height="960" alt="image" src="https://github.com/user-attachments/assets/0e360a51-acf7-4feb-b840-955cb0165eec" />
 
 
